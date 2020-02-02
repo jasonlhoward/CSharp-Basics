@@ -10,75 +10,60 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            // Variables
-            //  Named values that are mutable(the variable value can be changed)
-            int myNumber;
-            myNumber = 1;
-            myNumber = 2;
+            // Arithmetic
+            // postfix increment
+            int a = 1;
+            int b = a++;    // b is assigned to the value of a and then a is incremented
+            Console.WriteLine("a = {0}, b = {1}", a, b); // -> a = 2, b = 1
 
-            // Constants
-            //  Named values that are immutable(the value cannot be changed)
-            const float Pi = 3.14f;
+            // prefix increment
+            int c = 1;
+            int d = ++c;    // c is incremented and then d is assigned to the value of c
+            Console.WriteLine("c = {0}, d = {1}", c, d); // -> c = 2, d = 2
 
-            // Code Convention
-            //  Use camelCase for variables
-            //  Use PascalCase for constants
-            //  Must start with a letter (or underscore)
-            //  Can contain letters, numbers and underscore
+            // postfix decrement
+            int e = 1;
+            int f = e--;    // f is assigned to the value of e and then e is decremented
+            Console.WriteLine("e = {0}, f = {1}", e, f); // -> e = 0, f = 1
 
-            // Primitive Types
+            // prefix decrement
+            int g = 1;
+            int h = --g;    // g is decremented and then h is assigned the value of g
+            Console.WriteLine("g = {0}, h = {1}", g, h); // -> g = 0, h = 0
 
-            // 8 bit (0 - 255)
-            byte myByte = 1;
+            // Comparison
+            // == is equal to
+            // != not equal
+            //  > greater than
+            // >= greater than or equal to
+            //  < less than
+            // <= less than or equal to
 
-            // 32 bit 
-            int myInt = 1;
+            // Assignment
+            // a = 1    -> set a equal to 1
+            // a += 3   -> increment a by 3, then set this new value to a
+            // a -= 3   -> decrement a by 3, then set this new value to a
+            // a *= 3   -> multiply a by 3, then set this new value to a
+            // a /= 3   -> divide a by 3, then set this new value to a
+            // a = !b   -> set a = true is b is false, set a = false is b is true
 
-            // 64 bit
-            long myLong = 1;
+            // Logical
+            // a && b   -> evaluate to true if a and b are true
+            // a || b   -> evaluate to true if a or b are true
+            // a ! b    -> evaluate to true is a is not equal to b
 
-            // Real Numbers (in ascending precision)
-            float myFloat = 1.1f;
-            double myDouble = 1.1;
-            decimal myDecimal = 1.1m;
-
-            // must use single quotes
-            char myChar = 'J';
-
-            // must use double quotes
-            string myString = "Jason";
-
-            //
-            bool myBool = true;
-
-            // Array
-            // Enum
-            // Class
+            // Bitwise
+            // & -> bitwise "and"
+            // | -> bitwise "or"
 
 
-            // rather than explicitly telling c# the variable type
-            // can use "var" and C# complier will determine which is best
-            // hovering over the variable name will show the type
-            // hovering over the "var" keyword will show the .NET character type
+            // Examples
+            a = 1;
+            b = 2;
+            c = 3;
 
-            var number = 5;
-            var count = 10;
-            var totalPrice = 20.95f;
-            var character = 'A';
-            var firstName = "Jason";
-            var isWorking = true;
-
-            Console.WriteLine(number);
-            Console.WriteLine(count);
-            Console.WriteLine(totalPrice);
-            Console.WriteLine(character);
-            Console.WriteLine(firstName);
-            Console.WriteLine(isWorking);
-            Console.WriteLine("{0} {1}", float.MinValue, float.MaxValue);
-
-             // the complier will not let you reassign the value of a constant
-            // Pi = 5;
-            Console.WriteLine(Pi);
+            Console.WriteLine(a / b);
+            Console.WriteLine((float)a / (float)b);
         }
     }
 }
