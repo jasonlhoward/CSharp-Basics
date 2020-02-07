@@ -43,6 +43,12 @@ namespace CSharp_Basics
             // Add/Subtract
             Console.WriteLine("Add Example: " + timeSpan.Add(TimeSpan.FromMinutes(8))); // Add 8 minutes to orginal timespan - now will be 10 minutes
             Console.WriteLine("Subtract Example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2))); // Subtract 2 minutes from orginal timespan - now will be 10 minutes
+
+            // Convert to a string
+            string timeSpanStr = duration.ToString();
+
+            // Convert from a string
+            Console.WriteLine("Parsed: " + TimeSpan.Parse("01:02:03"));
         }
     }
 }
