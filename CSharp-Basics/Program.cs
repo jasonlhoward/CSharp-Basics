@@ -43,6 +43,28 @@ Look into the following paths:
 c:\folder1\folder2
 c:\users\john";
             Console.WriteLine(verbatimStr);
+
+            // Trim
+            var fullName = "Jason Howard ";
+            fullName = fullName.Trim();  // "Jason Howard"
+
+            // ToUpper
+            fullName = "Jason Howard ";
+            fullName = fullName.Trim().ToUpper(); // "JASON HOWARD"
+
+            // ToLower
+            fullName = "Jason Howard ";
+            fullName = fullName.Trim().ToLower(); // "jason howard"
+
+            // Split
+            fullName = "Jason Howard";
+            var names = fullName.Split(' ');  // ["Jason"]["Howard"]
+            firstName = names[0]; // "Jason"
+            lastName = names[1];  // "Howard"
+
+            // Replace
+            fullName = "Mosh Hamedani";
+            fullName = fullName.Replace("Mosh", "Moshfegh");  // "Moshfegh Hamedani"
         }
     }
 }
