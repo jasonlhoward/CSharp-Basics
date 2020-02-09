@@ -65,6 +65,30 @@ c:\users\john";
             // Replace
             fullName = "Mosh Hamedani";
             fullName = fullName.Replace("Mosh", "Moshfegh");  // "Moshfegh Hamedani"
+
+            // Validation
+            if (String.IsNullOrWhiteSpace("\n"))
+                Console.WriteLine("Invalid");
+
+            // Convert to Number (not sure it can be converted?)
+            var ageString = "25";
+            if (int.TryParse(ageString, out int age))
+                Console.WriteLine("Your age plus 10 years: " + (age + 10));
+
+            // Convert to Number (you know it can be converted)
+            age = Convert.ToInt32(ageString);
+
+            // Number to String
+            float price = 29.95f;
+            Console.WriteLine(price.ToString("C"));
+            Console.WriteLine(price.ToString("C0"));
+            Console.WriteLine(price.ToString("C2"));
+            
+
+            // Summarize a long string
+            var sentence = "This is going to be a really really really really really really long sentence.";
+            var summary = StringUtilities.Summarize(sentence, 25);
+            Console.WriteLine(summary);
         }
     }
 }
