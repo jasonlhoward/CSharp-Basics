@@ -89,6 +89,26 @@ c:\users\john";
             var sentence = "This is going to be a really really really really really really long sentence.";
             var summary = StringUtilities.Summarize(sentence, 25);
             Console.WriteLine(summary);
+
+            // StringBuilder 
+            var builder = new StringBuilder();
+
+            builder.Append('-', 10);
+            builder.AppendLine();
+            builder.Append("Header");
+            builder.AppendLine();
+            builder.Append('-', 10);
+
+            // can chain methods because a StringBuilder object returns itself
+            builder
+                .Replace('-', '+')
+                .Remove(0, 10)
+                .Insert(0, new string('*', 10));
+
+            var firstCharacter = builder[0];
+
+            Console.WriteLine(builder);
+
         }
     }
 }
