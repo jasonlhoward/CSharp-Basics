@@ -10,6 +10,7 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
+            Exercises.Exercise1();
         }
     }
 }
