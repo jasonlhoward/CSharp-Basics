@@ -88,9 +88,32 @@ namespace CSharp_Basics
             else
                 Console.WriteLine("Invalid Time");
         }
+
         //4- Write a program and ask the user to enter a few words separated by a space.Use the words to create a variable name with PascalCase.
         //For example, if the user types: "number of students", display "NumberOfStudents". Make sure that the program is not dependent on the input.
         //So, if the user types "NUMBER OF STUDENTS", the program should still display "NumberOfStudents".
+        public static void Exercise4()
+        {
+            Console.Write("Enter a few words separated by a space: ");
+            var input = Console.ReadLine();
+            if (String.IsNullOrWhiteSpace(input)) { return; }
+            
+            var words = input.Split(' ');
+            var builder = new StringBuilder();
+            
+            foreach (var word in words)
+            {
+                builder.Append(Formalize(word));
+            }
+
+            Console.WriteLine(builder.ToString());
+        }
+
+        public static string Formalize(string str)
+        {
+            str = str.ToUpper();
+            return str[0] + str.Substring(1).ToLower();
+        }
 
         //5- Write a program and ask the user to enter an English word. Count the number of vowels (a, e, o, u, i) in the word. 
         //So, if the user enters "inadequate", the program should display 6 on the console.
